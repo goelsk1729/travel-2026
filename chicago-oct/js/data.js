@@ -3,10 +3,10 @@ window.TRIP_DATA = {
     title: "Chicago Move Weekend",
     start: "2026-10-22",
     end: "2026-10-26",
-    homeBase: { name: "Clark / Division home base", lat: 41.9034, lng: -87.6317, neighborhood: "Gold Coast / Near North" }
+    homeBase: { name: "Home base", neighborhood: "Private" }
   },
   places: [
-    {id:"home",name:"Clark / Division home base",category:"Logistics",neighborhood:"Gold Coast / Near North",lat:41.9034,lng:-87.6317,status:"base",source:"Itinerary",days:["Fri","Sat","Sun","Mon"],note:"Your brother's current apartment area. Packing blocks and most day plans start or finish here.",url:"https://www.google.com/maps/search/?api=1&query=Clark%2FDivision%20CTA%20Chicago"},
+    {id:"home",name:"Home base",category:"Logistics",neighborhood:"Private",status:"base",source:"Itinerary",days:["Fri","Sat","Sun","Mon"],note:"Private home location; intentionally not mapped or linked publicly."},
     {id:"mindys",name:"Mindy's Bakery",category:"Bakery",neighborhood:"Wicker Park",lat:41.9109,lng:-87.6793,status:"saved",source:"Shortlist",days:[],note:"Destination bakery and strong pastry-first morning candidate.",url:"https://www.google.com/maps/place/Mindy%E2%80%99s+Bakery/data=!4m2!3m1!1s0x880fd2c07db953b7:0xd5c218147b8b77cc"},
     {id:"omi",name:"OMI Cafe",category:"Matcha",neighborhood:"Lakeview East",lat:41.9389,lng:-87.6441,status:"saved",source:"Shortlist",days:[],note:"Matcha-forward Japanese-inspired cafe; especially useful on a North Side day.",url:"https://www.google.com/maps/place/OMI+Cafe/data=!4m2!3m1!1s0x880fd312326bf9ed:0x1462ad97516a9fdd"},
     {id:"mako",name:"Cafe Mako",category:"Matcha",neighborhood:"Lincoln Park",lat:41.9221,lng:-87.6424,status:"alternate",source:"Shortlist",days:["Sat"],note:"Saturday low-transit backup for a proper matcha stop.",url:"https://www.google.com/maps/place/Cafe+Mako/data=!4m2!3m1!1s0x880fd3a8d9056e97:0x90df645347934ddf"},
@@ -28,11 +28,11 @@ window.TRIP_DATA = {
     {id:"alderman",name:"The Alderman",category:"Bar",neighborhood:"Pilsen",lat:41.8576,lng:-87.6560,status:"saved",source:"Shortlist",days:[],note:"Tiny intentional cocktail room; worth saving for a future Pilsen-centered evening if it does not fit this move weekend.",url:"https://www.google.com/maps/place/The+Alderman/data=!4m2!3m1!1s0x880e2d5814dd8b2d:0xa011a7e6eb69264a"},
     {id:"meadowlark",name:"The Meadowlark",category:"Bar",neighborhood:"Logan Square",lat:41.9214,lng:-87.6974,status:"planned",source:"Shortlist",days:["Sat"],note:"Saturday primary cocktail stop after Leavitt. Creative enough to feel like a destination without forcing another dinner reservation.",url:"https://www.google.com/maps/place/The+Meadowlark/data=!4m2!3m1!1s0x880fcd865023cd21:0x939a3e792c393f29"},
     {id:"kumiko",name:"Kumiko",category:"Bar",neighborhood:"West Loop",lat:41.8853,lng:-87.6433,status:"saved",source:"Shortlist",days:[],note:"Refined Japanese cocktail destination; best when it is the focus, not squeezed between packing obligations.",url:"https://www.google.com/maps/place/Kumiko/data=!4m2!3m1!1s0x880e2ccf57455555:0x5beb2291328dce22"},
-    {id:"omakase",name:"Omakase on Me",category:"Restaurant",neighborhood:"Lakeview",lat:41.9534,lng:-87.6490,status:"confirmed",source:"Shortlist",days:["Fri"],note:"Confirmed Friday at 7:30 PM for 2. This is the hard anchor around which Friday evening is built.",url:"https://www.google.com/maps/place/Omakase+on+me/data=!4m2!3m1!1s0x880fd30eacf278bd:0xae96ef65b9668ff5"},
-    {id:"pizzamici",name:"PIZZ'AMICI",category:"Restaurant",neighborhood:"West Town",lat:41.8909,lng:-87.6573,status:"target",source:"Shortlist",days:["Sun"],note:"Target Sunday around 7 PM for 3. Still unconfirmed; Sunday should remain flexible until this lands.",url:"https://www.google.com/maps/place/PIZZ'AMICI/data=!4m2!3m1!1s0x880e2d06bb6a7921:0x3b52cc404a3dd0f8"},
+    {id:"omakase",name:"Omakase on Me",category:"Restaurant",neighborhood:"Lakeview",lat:41.9534,lng:-87.6490,status:"confirmed",source:"Shortlist",days:["Fri"],note:"Confirmed Friday evening. This is the hard anchor around which the night is built.",url:"https://www.google.com/maps/place/Omakase+on+me/data=!4m2!3m1!1s0x880fd30eacf278bd:0xae96ef65b9668ff5"},
+    {id:"pizzamici",name:"PIZZ'AMICI",category:"Restaurant",neighborhood:"West Town",lat:41.8909,lng:-87.6573,status:"target",source:"Shortlist",days:["Sun"],note:"Sunday-evening target. Still unconfirmed; Sunday should remain flexible until this lands.",url:"https://www.google.com/maps/place/PIZZ'AMICI/data=!4m2!3m1!1s0x880e2d06bb6a7921:0x3b52cc404a3dd0f8"},
 
-    {id:"bigshoulders",name:"Big Shoulders Coffee",category:"Coffee",neighborhood:"Gold Coast",lat:41.8980,lng:-87.6284,status:"planned",source:"Itinerary",days:["Fri"],note:"Convenience-first Friday coffee: good enough to enjoy, close enough not to steal packing time.",url:"https://www.google.com/maps/search/?api=1&query=Big%20Shoulders%20Coffee%20858%20N%20State%20St%20Chicago"},
-    {id:"bluedoor",name:"Blue Door Kitchen & Garden",category:"Restaurant",neighborhood:"Gold Coast",lat:41.9032,lng:-87.6295,status:"planned",source:"Itinerary",days:["Fri"],note:"Friday lunch reset near home base so the afternoon can go straight back into packing.",url:"https://www.google.com/maps/search/?api=1&query=Blue%20Door%20Kitchen%20Garden%2052%20W%20Elm%20Chicago"},
+    {id:"bigshoulders",name:"Big Shoulders Coffee",category:"Coffee",neighborhood:"Gold Coast",lat:41.8980,lng:-87.6284,status:"planned",source:"Itinerary",days:["Fri"],note:"Convenience-first Friday coffee that keeps the morning focused on packing.",url:"https://www.google.com/maps/search/?api=1&query=Big%20Shoulders%20Coffee%20858%20N%20State%20St%20Chicago"},
+    {id:"bluedoor",name:"Blue Door Kitchen & Garden",category:"Restaurant",neighborhood:"Gold Coast",lat:41.9032,lng:-87.6295,status:"planned",source:"Itinerary",days:["Fri"],note:"Friday lunch reset chosen to keep the afternoon packing-friendly.",url:"https://www.google.com/maps/search/?api=1&query=Blue%20Door%20Kitchen%20Garden%2052%20W%20Elm%20Chicago"},
     {id:"magic",name:"Chicago Magic Lounge",category:"Activity",neighborhood:"Andersonville",lat:41.9735,lng:-87.6682,status:"planned",source:"Itinerary",days:["Fri"],note:"Friday night Performance Bar only: no show ticket, just a late bar-and-close-up-magic finish.",url:"https://www.google.com/maps/search/?api=1&query=Chicago%20Magic%20Lounge%205050%20N%20Clark%20Chicago"},
     {id:"leavitt",name:"The Leavitt Street Inn & Tavern",category:"Restaurant",neighborhood:"Bucktown",lat:41.9249,lng:-87.6820,status:"planned",source:"Itinerary",days:["Sat"],note:"Saturday dinner anchor: smashburger tavern stop before cocktails.",url:"https://www.google.com/maps/search/?api=1&query=The%20Leavitt%20Street%20Inn%20Tavern%202345%20N%20Leavitt%20Chicago"},
     {id:"armitage",name:"Armitage Alehouse",category:"Dessert",neighborhood:"Lincoln Park",lat:41.9182,lng:-87.6530,status:"planned",source:"Itinerary",days:["Sat"],note:"Saturday dessert pickup on the way home. Sticky Date Cake is the target.",url:"https://www.google.com/maps/search/?api=1&query=Armitage%20Alehouse%201000%20W%20Armitage%20Chicago"},
@@ -41,47 +41,47 @@ window.TRIP_DATA = {
   ],
   itineraries: {
     Thu: {date:"Oct 22",title:"Arrival night",theme:"Land late. Protect Friday energy.",route:[],items:[
-      {time:"5:27 PM",title:"Fly SFO → ORD",detail:"Flight details kept private. Dinner or airport snack before/during travel.",type:"flight"},
-      {time:"11:55 PM",title:"Arrive at O'Hare",detail:"Head to your brother's apartment near Clark / Division.",type:"flight"},
-      {time:"~1:00 AM",title:"Sleep",detail:"No late-night plan. Friday is already a packing-heavy day.",type:"open"}
+      {time:"Evening",title:"Fly SFO → ORD",detail:"Exact flight details are kept private.",type:"flight"},
+      {time:"Late night",title:"Arrive in Chicago",detail:"Head to private home base.",type:"flight"},
+      {time:"After arrival",title:"Sleep",detail:"No late-night plan. Friday is already a packing-heavy day.",type:"open"}
     ]},
-    Fri: {date:"Oct 23",title:"Packing-heavy + Omakase + magic",theme:"Hyper-local daytime, then one proper Chicago night.",route:["home","bigshoulders","home","bluedoor","home","cache","omakase","magic"],items:[
-      {time:"8:30 AM",title:"Coffee run — Big Shoulders",detail:"Optional convenience stop. Keep the morning packing-first.",type:"coffee",place:"bigshoulders"},
-      {time:"9:00–12:30",title:"Packing block #1",detail:"Apartment near Clark / Division.",type:"packing",place:"home"},
-      {time:"12:30 PM",title:"Lunch — Blue Door",detail:"Close enough to feel like a break without becoming an excursion.",type:"food",place:"bluedoor"},
-      {time:"1:45–5:00",title:"Packing block #2",detail:"Try to knock out the most annoying prep today.",type:"packing",place:"home"},
-      {time:"5:00–5:45",title:"Reset / shower / change",detail:"Switch from move mode to night-out mode.",type:"open",place:"home"},
-      {time:"6:00 PM",title:"Optional drink — Caché",detail:"Exactly one drink if packing is on schedule. Skip freely if not.",type:"bar",place:"cache"},
-      {time:"7:30 PM",title:"Omakase on Me",detail:"CONFIRMED for 2. Hard anchor; plan on roughly 90 minutes.",type:"confirmed-event",place:"omakase"},
-      {time:"~10:15 PM",title:"Chicago Magic Lounge",detail:"Performance Bar only. First-come, capacity-limited late-night finish.",type:"activity",place:"magic"}
+    Fri: {date:"Oct 23",title:"Packing-heavy + Omakase + magic",theme:"Hyper-local daytime, then one proper Chicago night.",route:["bigshoulders","bluedoor","cache","omakase","magic"],items:[
+      {time:"Morning",title:"Coffee run — Big Shoulders",detail:"Optional convenience stop. Keep the morning packing-first.",type:"coffee",place:"bigshoulders"},
+      {time:"Morning",title:"Packing block #1",detail:"Private home base.",type:"packing",place:"home"},
+      {time:"Midday",title:"Lunch — Blue Door",detail:"A real break without turning into an excursion.",type:"food",place:"bluedoor"},
+      {time:"Afternoon",title:"Packing block #2",detail:"Try to knock out the most annoying prep today.",type:"packing",place:"home"},
+      {time:"Late afternoon",title:"Reset / shower / change",detail:"Switch from move mode to night-out mode.",type:"open",place:"home"},
+      {time:"Early evening",title:"Optional drink — Caché",detail:"One drink if packing is on schedule. Skip freely if not.",type:"bar",place:"cache"},
+      {time:"Evening",title:"Omakase on Me",detail:"CONFIRMED. Hard anchor for Friday night.",type:"confirmed-event",place:"omakase"},
+      {time:"Late night",title:"Chicago Magic Lounge",detail:"Performance Bar only. First-come, capacity-limited finish.",type:"activity",place:"magic"}
     ]},
-    Sat: {date:"Oct 24",title:"Coffee day out + packing + west-side night",theme:"Explore in the morning, earn the night out with a real afternoon packing block.",route:["home","loba","rendang","home","leavitt","meadowlark","armitage","home"],items:[
-      {time:"10:00 AM",title:"Loba Pastry + Coffee",detail:"PRIMARY: coffee + a couple pastries. Keep it light enough for lunch.",type:"coffee",place:"loba"},
-      {time:"11:30 AM",title:"Rendang Republic",detail:"PRIMARY: distinctive casual Indonesian lunch instead of generic brunch.",type:"food",place:"rendang"},
-      {time:"~1:00 PM",title:"Return home",detail:"Target being back near Clark / Division by 1:00–1:30.",type:"open",place:"home"},
-      {time:"1:30–5:00",title:"Packing block #3",detail:"Another meaningful block before the Monday move.",type:"packing",place:"home"},
-      {time:"6:00 PM",title:"Leavitt Street — burgers",detail:"L. St. Smash dinner anchor before cocktails.",type:"food",place:"leavitt"},
-      {time:"7:45 PM",title:"The Meadowlark",detail:"Primary Saturday cocktail stop. One focused round / 60–90 minutes.",type:"bar",place:"meadowlark"},
-      {time:"~9:15 PM",title:"Armitage Alehouse pickup",detail:"Sticky Date Cake target; head home soon because of the gelato.",type:"dessert",place:"armitage"},
+    Sat: {date:"Oct 24",title:"Coffee day out + packing + west-side night",theme:"Explore in the morning, earn the night out with a real afternoon packing block.",route:["loba","rendang","leavitt","meadowlark","armitage"],items:[
+      {time:"Morning",title:"Loba Pastry + Coffee",detail:"PRIMARY: coffee + a couple pastries. Keep it light enough for lunch.",type:"coffee",place:"loba"},
+      {time:"Late morning",title:"Rendang Republic",detail:"PRIMARY: distinctive casual Indonesian lunch instead of generic brunch.",type:"food",place:"rendang"},
+      {time:"Early afternoon",title:"Return to home base",detail:"Return for a meaningful packing block.",type:"open",place:"home"},
+      {time:"Afternoon",title:"Packing block #3",detail:"Another meaningful block before the Monday move.",type:"packing",place:"home"},
+      {time:"Evening",title:"Leavitt Street — burgers",detail:"L. St. Smash dinner anchor before cocktails.",type:"food",place:"leavitt"},
+      {time:"After dinner",title:"The Meadowlark",detail:"Primary Saturday cocktail stop. One focused round.",type:"bar",place:"meadowlark"},
+      {time:"Later",title:"Armitage Alehouse pickup",detail:"Sticky Date Cake target; head back afterward because of the gelato.",type:"dessert",place:"armitage"},
       {time:"ALT AM",title:"Cafe Mako → Evette's",detail:"Lower-transit backup if Friday runs late or you want an easier morning.",type:"open",place:"mako"}
     ]},
-    Sun: {date:"Oct 25",title:"Open day — pizza target",theme:"The biggest remaining planning opportunity, but packing still gets a buffer.",route:["home","pizzamici"],items:[
+    Sun: {date:"Oct 25",title:"Open day — pizza target",theme:"The biggest remaining planning opportunity, but packing still gets a buffer.",route:["pizzamici"],items:[
       {time:"Morning",title:"Coffee / matcha cluster — TBD",detail:"Pick from the remaining shortlist based on the neighborhood we choose.",type:"open"},
       {time:"Lunch",title:"Unique casual lunch — TBD",detail:"Something destination-worthy without turning the day into a tasting menu.",type:"open"},
-      {time:"~2:30–5:00",title:"Packing buffer",detail:"Leave meaningful slack before Monday's move.",type:"packing",place:"home"},
-      {time:"~7:00 PM",title:"PIZZ'AMICI",detail:"TARGET for 3. Still needs to be secured.",type:"food",place:"pizzamici"},
+      {time:"Afternoon",title:"Packing buffer",detail:"Leave meaningful slack before Monday's move.",type:"packing",place:"home"},
+      {time:"Evening",title:"PIZZ'AMICI",detail:"TARGET. Still needs to be secured.",type:"food",place:"pizzamici"},
       {time:"After",title:"Optional nearby bar",detail:"Only choose after the dinner reservation is confirmed.",type:"open"}
     ]},
-    Mon: {date:"Oct 26",title:"Move day + fly home",theme:"Logistics first. Food stays easy and nearby.",route:["home"],items:[
+    Mon: {date:"Oct 26",title:"Move day + fly home",theme:"Logistics first. Food stays easy and nearby.",route:[],items:[
       {time:"Morning",title:"Coffee + final packing",detail:"Keep breakfast within a short radius of the old apartment.",type:"coffee",place:"home"},
       {time:"Daytime",title:"Movers / apartment move",detail:"Main event. Leave slack for delays and setup.",type:"packing"},
       {time:"Afternoon",title:"New-apartment setup",detail:"Unpack essentials; keep the itinerary otherwise empty.",type:"open"},
-      {time:"~6:15 PM",title:"Leave for ORD — tentative",detail:"Adjust day-of based on move progress and traffic.",type:"flight"},
-      {time:"9:31 PM",title:"Fly ORD → SFO",detail:"Flight details kept private. Arrives SFO 12:30 AM Tuesday.",type:"flight"}
+      {time:"Evening",title:"Leave for ORD",detail:"Exact departure timing stays private; adjust based on move progress and traffic.",type:"flight"},
+      {time:"Evening",title:"Fly ORD → SFO",detail:"Exact flight details are kept private.",type:"flight"}
     ]}
   },
   decisions: [
-    {title:"Lock Sunday dinner",text:"Secure PIZZ'AMICI for 3 around 7 PM. Then build Sunday around West Town instead of guessing."},
+    {title:"Lock Sunday dinner",text:"Secure PIZZ'AMICI for Sunday evening. Then build Sunday around West Town instead of guessing."},
     {title:"Choose Saturday morning mode",text:"Primary is Loba + Rendang. Backup is Cafe Mako + Evette's if you want lower transit."},
     {title:"Protect Friday packing",text:"Caché is optional. If packing slips, remove it before touching Omakase or Magic Lounge."},
     {title:"Define Sunday packing load",text:"How much must be finished before Monday determines whether Sunday can be adventurous."},
