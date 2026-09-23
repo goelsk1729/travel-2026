@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0e12" />
+  <meta name="description" content="Chicago trip dashboard for Oct 22–26, 2026." />
+  <title>Chicago · Oct 22–26, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ3ynJDZyGeMZtZ0o9VQp9m8xJ7V0Jk=" crossorigin="" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="Chicago trip dashboard home">
+      <span class="brand-mark">CHI</span>
+      <span class="brand-copy"><b>Move Weekend</b><small>Oct 22–26 · 2026</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary"><a href="../">All trips</a>
+      <a href="#map-section">Map</a>
+      <a href="#itinerary">Itinerary</a>
+      <a href="#shortlist">Shortlist</a>
+      <a href="#decisions">Decisions</a>
+    </nav>
+    <button class="icon-button" id="themeButton" aria-label="Toggle contrast">◐</button>
+  </header>
+
+  <main>
+    <section class="hero shell" id="overview">
+      <div class="hero-copy">
+        <div class="overline">Chicago · food-first move weekend</div>
+        <h1>Pack smart.<br><span>Eat extremely well.</span></h1>
+        <p class="hero-lede">A flexible trip plan built around your brother's move, not around checking boxes. Coffee, matcha, bakeries, bars and standout meals are clustered around the time you actually have.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#itinerary">See the plan</a>
+          <a class="button ghost" href="#map-section">Explore the map</a>
+        </div>
+      </div>
+      <aside class="trip-card glass">
+        <div class="trip-card-top">
+          <span class="live-dot"></span>
+          <span>Working itinerary</span>
+          <span class="muted" id="countdown"></span>
+        </div>
+        <div class="flight-stack">
+          <div class="airport"><strong>SFO</strong><small>Thu · 5:27 PM</small></div>
+          <div class="flight-line"><span>AA 2253</span><i></i><span>4h 28m</span></div>
+          <div class="airport align-right"><strong>ORD</strong><small>11:55 PM</small></div>
+        </div>
+        <div class="trip-rule"></div>
+        <div class="flight-stack reverse">
+          <div class="airport"><strong>ORD</strong><small>Mon · 9:31 PM</small></div>
+          <div class="flight-line"><span>AA 2158</span><i></i><span>4h 59m</span></div>
+          <div class="airport align-right"><strong>SFO</strong><small>Tue · 12:30 AM</small></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="shell metrics" aria-label="Trip overview">
+      <article class="metric"><span>23</span><p>saved places</p></article>
+      <article class="metric"><span>1</span><p>confirmed dinner</p></article>
+      <article class="metric"><span>3+</span><p>packing blocks</p></article>
+      <article class="metric"><span>4</span><p>usable planning days</p></article>
+    </section>
+
+    <section class="shell anchors">
+      <article class="anchor-card confirmed-card">
+        <div class="anchor-heading"><span class="status-pill confirmed">Confirmed</span><span>Friday · 7:30 PM</span></div>
+        <h2>Omakase on Me</h2>
+        <p>Table for 2 · 3941 N Broadway · high-energy multi-course omakase with sake.</p>
+        <a href="https://www.google.com/maps/place/Omakase+on+me/data=!4m2!3m1!1s0x880fd30eacf278bd:0xae96ef65b9668ff5" target="_blank" rel="noreferrer">Open in Maps ↗</a>
+      </article>
+      <article class="anchor-card target-card">
+        <div class="anchor-heading"><span class="status-pill target">Target</span><span>Sunday · ~7:00 PM</span></div>
+        <h2>PIZZ'AMICI</h2>
+        <p>Trying for 3 · West Town · still needs to be secured before Sunday is fully shaped.</p>
+        <a href="https://www.google.com/maps/place/PIZZ'AMICI/data=!4m2!3m1!1s0x880e2d06bb6a7921:0x3b52cc404a3dd0f8" target="_blank" rel="noreferrer">Open in Maps ↗</a>
+      </article>
+    </section>
+
+    <section class="map-section" id="map-section">
+      <div class="shell section-heading map-heading">
+        <div>
+          <div class="overline">Interactive map</div>
+          <h2>See the trip spatially.</h2>
+        </div>
+        <p>Filter by category or day. Selecting a day draws the working route and dims everything else.</p>
+      </div>
+
+      <div class="map-shell">
+        <div class="map-toolbar">
+          <div class="segmented" id="dayFilters" aria-label="Day filters"></div>
+          <div class="category-filters" id="categoryFilters"></div>
+        </div>
+        <div id="map" aria-label="Chicago trip map"></div>
+        <aside class="map-drawer glass" id="mapDrawer" aria-live="polite">
+          <div class="drawer-empty">
+            <span class="drawer-kicker">Map detail</span>
+            <h3>Choose a pin</h3>
+            <p>Open a place to see why it matters, when it fits and where it sits in the trip.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="shell section" id="itinerary">
+      <div class="section-heading">
+        <div><div class="overline">Working itinerary</div><h2>Designed around the move.</h2></div>
+        <p>Friday and Saturday have a strong shape. Sunday stays intentionally loose until pizza and packing needs are clearer.</p>
+      </div>
+      <div class="day-tabs" id="itineraryTabs"></div>
+      <div id="itineraryPanel"></div>
+    </section>
+
+    <section class="shell section" id="shortlist">
+      <div class="section-heading">
+        <div><div class="overline">Master pool</div><h2>The shortlist is not a checklist.</h2></div>
+        <p>Use search and filters to understand what you saved, what is planned, and what should stay optional.</p>
+      </div>
+      <div class="shortlist-toolbar glass">
+        <label class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search place, neighborhood, category…" /></label>
+        <div class="list-filters" id="listFilters"></div>
+      </div>
+      <div class="place-grid" id="placeGrid"></div>
+    </section>
+
+    <section class="shell section" id="decisions">
+      <div class="section-heading">
+        <div><div class="overline">Open loops</div><h2>What actually needs a decision.</h2></div>
+        <p>Everything else can remain flexible. These are the few choices that change the shape of the trip.</p>
+      </div>
+      <div class="decision-grid" id="decisionGrid"></div>
+    </section>
+
+    <section class="shell notes-section">
+      <article class="notes-card glass">
+        <div>
+          <div class="overline">Planning principle</div>
+          <h2>Geography beats hype.</h2>
+          <p>If two great places create an hour of unnecessary transit on a packing weekend, they lose. This dashboard keeps the shortlist broad but the itinerary compact.</p>
+        </div>
+        <div class="source-stack">
+          <span>Data sources</span>
+          <p>Google Takeout shortlist · American Airlines confirmation · OpenTable Omakase confirmation · current working plans from this trip conversation.</p>
+          <small>Hours and menus can change. Re-check must-do stops during trip week.</small>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <div><strong>Chicago · Oct 2026</strong><span>Travel 2026 · trip dashboard</span></div>
+    <a href="#overview">Back to top ↑</a>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
