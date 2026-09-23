@@ -67,12 +67,12 @@
     if(routeNumberLayer){map.removeLayer(routeNumberLayer);routeNumberLayer=null}
     if(activeDay==='All' || !D.itineraries[activeDay]) return;
     const ids = D.itineraries[activeDay].route || [];
-    const coords = ids.map(id=>D.places.find(p=>p.id===id)).filter(Boolean).map(p=>[p.lat,p.lng]);
+    const coords = ids.map(id=>D.places.find(p=>p.id===id)).filter(p=>p && Number.isFinite(p.lat) && Number.isFinite(p.lng)).map(p=>[p.lat,p.lng]);
     if(coords.length<2) return;
     routeLayer=L.polyline(coords,{color:dayColors[activeDay],weight:3,opacity:.72,dashArray:'7 9'}).addTo(map);
     routeNumberLayer=L.layerGroup().addTo(map);
     const seen=new Set(); let n=1;
-    ids.forEach(id=>{ if(seen.has(id))return; seen.add(id); const p=D.places.find(x=>x.id===id); if(!p)return;
+    ids.forEach(id=>{ if(seen.has(id))return; seen.add(id); const p=D.places.find(x=>x.id===id); if(!p || !Number.isFinite(p.lat) || !Number.isFinite(p.lng))return;
       L.marker([p.lat,p.lng],{interactive:false,icon:L.divIcon({className:'',iconSize:[26,18],iconAnchor:[13,34],html:`<span class="route-label">${n++}</span>`})}).addTo(routeNumberLayer);
     });
     map.fitBounds(L.latLngBounds(coords).pad(.18),{animate:true,duration:.6});
@@ -87,7 +87,7 @@
     const day=D.itineraries[activeItinerary];
     const rows=day.items.map(item=>{
       const place = item.place ? D.places.find(p=>p.id===item.place) : null;
-      return `<div class="timeline-row ${esc(item.type)}"><div class="timeline-time">${esc(item.time)}</div><div class="timeline-node"><i></i></div><div class="timeline-copy"><strong>${esc(item.title)}</strong><p>${esc(item.detail)}</p>${place?`<a class="place-link" href="${place.url}" target="_blank" rel="noreferrer">${esc(place.neighborhood)} · maps ↗</a>`:''}</div></div>`;
+      return `<div class="timeline-row ${esc(item.type)}"><div class="timeline-time">${esc(item.time)}</div><div class="timeline-node"><i></i></div><div class="timeline-copy"><strong>${esc(item.title)}</strong><p>${esc(item.detail)}</p>${place && place.url?`<a class="place-link" href="${place.url}" target="_blank" rel="noreferrer">${esc(place.neighborhood)} · maps ↗</a>`:place?`<span class="place-link">${esc(place.neighborhood)}</span>`:''}</div></div>`;
     }).join('');
     $('itineraryPanel').innerHTML=`<article class="itinerary-card"><aside class="day-summary"><div class="date">${activeItinerary}<small>${day.date} · 2026</small></div><h3>${esc(day.title)}</h3><p>${esc(day.theme)}</p><button class="button ghost" id="showDayMap">Show this day on map</button></aside><div class="timeline">${rows}</div></article>`;
     $('showDayMap').onclick=()=>{activeDay=activeItinerary;renderMapFilters();applyMapFilter();drawRoute();document.querySelector('#map-section').scrollIntoView({behavior:'smooth'});};
