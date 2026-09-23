@@ -41,7 +41,7 @@ window.TRIP_DATA = {
   ],
   itineraries: {
     Thu: {date:"Oct 22",title:"Arrival night",theme:"Land late. Protect Friday energy.",route:[],items:[
-      {time:"5:27 PM",title:"Fly SFO → ORD",detail:"AA 2253. Dinner or airport snack before/during travel.",type:"flight"},
+      {time:"5:27 PM",title:"Fly SFO → ORD",detail:"Flight details kept private. Dinner or airport snack before/during travel.",type:"flight"},
       {time:"11:55 PM",title:"Arrive at O'Hare",detail:"Head to your brother's apartment near Clark / Division.",type:"flight"},
       {time:"~1:00 AM",title:"Sleep",detail:"No late-night plan. Friday is already a packing-heavy day.",type:"open"}
     ]},
@@ -77,7 +77,7 @@ window.TRIP_DATA = {
       {time:"Daytime",title:"Movers / apartment move",detail:"Main event. Leave slack for delays and setup.",type:"packing"},
       {time:"Afternoon",title:"New-apartment setup",detail:"Unpack essentials; keep the itinerary otherwise empty.",type:"open"},
       {time:"~6:15 PM",title:"Leave for ORD — tentative",detail:"Adjust day-of based on move progress and traffic.",type:"flight"},
-      {time:"9:31 PM",title:"Fly ORD → SFO",detail:"AA 2158. Arrives SFO 12:30 AM Tuesday.",type:"flight"}
+      {time:"9:31 PM",title:"Fly ORD → SFO",detail:"Flight details kept private. Arrives SFO 12:30 AM Tuesday.",type:"flight"}
     ]}
   },
   decisions: [
