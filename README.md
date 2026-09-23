@@ -26,3 +26,7 @@ Future trips should be added as sibling folders (for example `iceland-feb/`) and
 ## GitHub Pages
 
 Publish from the `main` branch and the repository root. Once enabled, the hub is served from the repository Pages URL, and each trip folder becomes a subpath under that URL.
+
+## Privacy
+
+This repository is intended for public GitHub Pages. Do **not** commit booking-access identifiers such as airline confirmation/record-locator codes, ticket numbers, reservation confirmation numbers, account numbers, QR/barcode data, or other credentials. Public trip pages should use generic labels such as **Outbound flight**, **Return flight**, or **Confirmed reservation** instead.
