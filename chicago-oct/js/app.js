@@ -13,9 +13,7 @@
   const esc = (s='') => String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 
   function countdown(){
-    const target = new Date('2026-10-22T00:00:00-05:00');
-    const diff = Math.ceil((target - new Date()) / 86400000);
-    $('countdown').textContent = diff > 0 ? `${diff} days` : diff === 0 ? 'today' : 'trip passed';
+    $('countdown').textContent = 'October';
   }
 
   function mapIcon(place){
