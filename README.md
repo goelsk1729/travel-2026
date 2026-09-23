@@ -5,7 +5,7 @@ Personal travel dashboards for 2026, designed to be published through GitHub Pag
 ## Sites
 
 - **Travel hub** — repository root (`/travel-2026/`)
-- **Chicago · Oct 22–26, 2026** — [`/chicago-oct/`](./chicago-oct/)
+- **Chicago · October 2026** — [`/chicago-oct/`](./chicago-oct/)
 
 ## Structure
 
@@ -29,4 +29,4 @@ Publish from the `main` branch and the repository root. Once enabled, the hub is
 
 ## Privacy
 
-This repository is intended for public GitHub Pages. Do **not** commit booking-access identifiers such as airline confirmation/record-locator codes, ticket numbers, reservation confirmation numbers, account numbers, QR/barcode data, or other credentials. Public trip pages should use generic labels such as **Outbound flight**, **Return flight**, or **Confirmed reservation** instead.
+This repository is intended for public GitHub Pages. Do **not** commit booking-access identifiers such as airline confirmation/record-locator codes, ticket numbers, reservation confirmation numbers, account numbers, QR/barcode data, or other credentials. Public trip pages should use generic labels such as **Outbound flight**, **Return flight**, or **Confirmed reservation** instead. Exact home/lodging locations should not be mapped; exact flight times, booking windows, guest counts, and precise travel dates should be generalized to dayparts, weekdays, or month-level timing unless there is a specific reason to publish them.
