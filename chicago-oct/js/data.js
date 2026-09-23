@@ -1,8 +1,8 @@
 window.TRIP_DATA = {
   trip: {
     title: "Chicago Move Weekend",
-    start: "2026-10-22",
-    end: "2026-10-26",
+    start: "2026-10",
+    end: "2026-10",
     homeBase: { name: "Home base", neighborhood: "Private" }
   },
   places: [
@@ -40,12 +40,12 @@ window.TRIP_DATA = {
     {id:"evettes",name:"Evette's Lincoln Park",category:"Restaurant",neighborhood:"Lincoln Park",lat:41.9183,lng:-87.6380,status:"alternate",source:"Itinerary",days:["Sat"],note:"Lower-transit Saturday lunch backup paired with Cafe Mako if Friday night runs late.",url:"https://www.google.com/maps/search/?api=1&query=Evette%27s%20Lincoln%20Park%20350%20W%20Armitage%20Chicago"}
   ],
   itineraries: {
-    Thu: {date:"Oct 22",title:"Arrival night",theme:"Land late. Protect Friday energy.",route:[],items:[
+    Thu: {date:"October",title:"Arrival night",theme:"Land late. Protect Friday energy.",route:[],items:[
       {time:"Evening",title:"Fly SFO → ORD",detail:"Exact flight details are kept private.",type:"flight"},
       {time:"Late night",title:"Arrive in Chicago",detail:"Head to private home base.",type:"flight"},
       {time:"After arrival",title:"Sleep",detail:"No late-night plan. Friday is already a packing-heavy day.",type:"open"}
     ]},
-    Fri: {date:"Oct 23",title:"Packing-heavy + Omakase + magic",theme:"Hyper-local daytime, then one proper Chicago night.",route:["bigshoulders","bluedoor","cache","omakase","magic"],items:[
+    Fri: {date:"October",title:"Logistics-heavy + Omakase + magic",theme:"Hyper-local daytime, then one proper Chicago night.",route:["bigshoulders","bluedoor","cache","omakase","magic"],items:[
       {time:"Morning",title:"Coffee run — Big Shoulders",detail:"Optional convenience stop. Keep the morning packing-first.",type:"coffee",place:"bigshoulders"},
       {time:"Morning",title:"Packing block #1",detail:"Private home base.",type:"packing",place:"home"},
       {time:"Midday",title:"Lunch — Blue Door",detail:"A real break without turning into an excursion.",type:"food",place:"bluedoor"},
@@ -55,7 +55,7 @@ window.TRIP_DATA = {
       {time:"Evening",title:"Omakase on Me",detail:"CONFIRMED. Hard anchor for Friday night.",type:"confirmed-event",place:"omakase"},
       {time:"Late night",title:"Chicago Magic Lounge",detail:"Performance Bar only. First-come, capacity-limited finish.",type:"activity",place:"magic"}
     ]},
-    Sat: {date:"Oct 24",title:"Coffee day out + packing + west-side night",theme:"Explore in the morning, earn the night out with a real afternoon packing block.",route:["loba","rendang","leavitt","meadowlark","armitage"],items:[
+    Sat: {date:"October",title:"Coffee day out + logistics + west-side night",theme:"Explore in the morning, then protect a real afternoon logistics block.",route:["loba","rendang","leavitt","meadowlark","armitage"],items:[
       {time:"Morning",title:"Loba Pastry + Coffee",detail:"PRIMARY: coffee + a couple pastries. Keep it light enough for lunch.",type:"coffee",place:"loba"},
       {time:"Late morning",title:"Rendang Republic",detail:"PRIMARY: distinctive casual Indonesian lunch instead of generic brunch.",type:"food",place:"rendang"},
       {time:"Early afternoon",title:"Return to home base",detail:"Return for a meaningful packing block.",type:"open",place:"home"},
@@ -65,14 +65,14 @@ window.TRIP_DATA = {
       {time:"Later",title:"Armitage Alehouse pickup",detail:"Sticky Date Cake target; head back afterward because of the gelato.",type:"dessert",place:"armitage"},
       {time:"ALT AM",title:"Cafe Mako → Evette's",detail:"Lower-transit backup if Friday runs late or you want an easier morning.",type:"open",place:"mako"}
     ]},
-    Sun: {date:"Oct 25",title:"Open day — pizza target",theme:"The biggest remaining planning opportunity, but packing still gets a buffer.",route:["pizzamici"],items:[
+    Sun: {date:"October",title:"Open day — pizza target",theme:"The biggest remaining planning opportunity, but packing still gets a buffer.",route:["pizzamici"],items:[
       {time:"Morning",title:"Coffee / matcha cluster — TBD",detail:"Pick from the remaining shortlist based on the neighborhood we choose.",type:"open"},
       {time:"Lunch",title:"Unique casual lunch — TBD",detail:"Something destination-worthy without turning the day into a tasting menu.",type:"open"},
       {time:"Afternoon",title:"Packing buffer",detail:"Leave meaningful slack before Monday's move.",type:"packing",place:"home"},
       {time:"Evening",title:"PIZZ'AMICI",detail:"TARGET. Still needs to be secured.",type:"food",place:"pizzamici"},
       {time:"After",title:"Optional nearby bar",detail:"Only choose after the dinner reservation is confirmed.",type:"open"}
     ]},
-    Mon: {date:"Oct 26",title:"Move day + fly home",theme:"Logistics first. Food stays easy and nearby.",route:[],items:[
+    Mon: {date:"October",title:"Logistics day + fly home",theme:"Logistics first. Food stays easy and nearby.",route:[],items:[
       {time:"Morning",title:"Coffee + final packing",detail:"Keep breakfast within a short radius of the old apartment.",type:"coffee",place:"home"},
       {time:"Daytime",title:"Movers / apartment move",detail:"Main event. Leave slack for delays and setup.",type:"packing"},
       {time:"Afternoon",title:"New-apartment setup",detail:"Unpack essentials; keep the itinerary otherwise empty.",type:"open"},
